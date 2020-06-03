@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 //connect to the database
 mongoose.connect('mongodb://localhost/todo_database');
 
-//acquire the connection (to check if it is sucessful)
+//acquire the connection 
 const db = mongoose.connection;
 
 //error

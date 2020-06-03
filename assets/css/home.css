@@ -1,12 +1,12 @@
 body {
-    background-color: #7f7f7f;
-    font-family: sans-serif;
+    background-color:lightblue;
+    font-family: Georgia, serif;
     margin: 0;
     padding: 0;
 }
 
 p{
-    color: #565656;
+    color: black;
 }
 
 /* Main/Parent container */
@@ -16,32 +16,32 @@ p{
     background: white;
     margin: auto;
     margin-top: 30px;
-    border-radius: 5px;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 1rem;
+    box-shadow: 0 12px 16px 0 black, 0 17px 50px 0 black;
 }
 
 #heading {
     text-align: center;
     font-family: Georgia, serif;
-    font-size: 2.8rem;
-    color: brown;
-    margin: 0;
+    font-size: 2.5rem;
+    color:red;
     margin: 10px;
 }
 
 /* Task Decription */
 #description-container {
     width: auto;
-    border-top: 1px solid #d7d7d7;
-    border-bottom: 1px solid #d7d7d7;
+    border-radius: 1rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
     padding: 10px;
-    padding-bottom: 28px;
+    padding-bottom: 12px;
 }
 
 #description-container p, #due-date-container p, #category-container p {
     display: inline;
-    font-size: 0.9rem;
-    font-family: Cambria, 'Times New Roman', serif;
+    font-size: 1rem;
+    font-family: Georgia, serif;
 }
 
 #description-container p {
@@ -51,23 +51,24 @@ p{
 
 
 #form-description {
-    width: 75%;
+    width: 100%;
     border: 0;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0.4;
-    font-family: Cambria, 'Times New Roman', serif;
+    font-family: Georgia, serif;
 }
 
 /* Category and Date container */
 .category-date-container {
     display: flex;
+    border-radius: 2rem;
 }
 
 #category-heading {
     padding-bottom: 5px;
+    color: gray;
 }
-
 
 #choose-category {
     font-weight: bold;
@@ -76,24 +77,16 @@ p{
 /* Dropdown*/
 select {
     width: 100%;
-    border: 0;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0.6;
-    font-family: Cambria, 'Times New Roman', serif;
-}
-
-#date-input-box {
-    width: 75%;
-    border: 0;
-    background-color: transparent;
-    font-size: 1rem;
-    opacity: 0.4;
-    font-family: Cambria, 'Times New Roman', serif;
+    font-family: Georgia, serif;
+    
 }
 
 #category-container {
-    border-right: 1px solid #d7d7d7;
+    border-radius: 1rem;
+    border-right: 1px solid white;
     width: 50%;
     padding: 10px;
 }
@@ -102,49 +95,55 @@ select {
     width: 50%;
     padding-left: 10px;
     padding: 10px;
+    border-radius: 1rem;
 }
 
+#date-input-box {
+    width: 75%;
+    border: 0;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-family: Georgia, serif;
+}
 
 .buttons-container {
     display: flex;
     justify-content: center;
     padding: 25px;
-    border-top: 1px solid rgba(0, 0, 0, 0.247);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 /* Add Button */
 .add-button {
-    background-color: #464646;
+    background-color: darkgray;
     color: white;
-    border-radius: 5px;
+    border-radius: 50px;
     height: 100%;
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     padding: 14px;
     margin-right: 25px;
 }
 
 /* Delete Button */
 .delete-button {
-    background-color: #ed3824;
+    background-color: darkred;
     color: white;
-    border-radius: 5px;
+    border-radius: 50px;
     height: 100%;
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     margin-right: 3px;
 }
 
 /* Button's Hover */
 .add-button:hover {
-    background: #101010;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background: black;
 }
 
 .delete-button:hover {
-    background: #890f00;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background: red;
 }
 
 /*****Task-List*****/
@@ -157,17 +156,17 @@ select {
 
 /*FOR EVEN NUMBERED OF TASK LIST */
 #task:nth-child(2n) {
-    background: #fbfbfb;
+    background: white;
 }
 
 /* FOR ODD NUMBERED OF TASK LIST */
 #task:nth-child(2n+1) {
-    background: #f7f7f7;
+    background: white;
 }
 
 /*hover effects */
 #task:hover, .category-date-container:hover, #description-container:hover {
-    background-color: #e1e1e1;
+    background-color: white;
 }
 
 .show {
@@ -182,19 +181,19 @@ select {
     display: flex;
     flex-direction: row; 
     justify-content: space-evenly;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    border-bottom: 1px solid black;
     padding-bottom: 10px;
     padding-top: 15px;
 }
 
 /* CATEGORY BOX*/
 #task-category {
-    background-color: #f1a500;
+    background-color: goldenrod;
     color: aliceblue;
     height: 18px;
     width: 70px;
     padding: 10px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: center;    
     font-family: Baskerville, sans-serif;
     text-transform: uppercase;
@@ -203,19 +202,21 @@ select {
 
 /* Task Description */
 #task-description {
-    color: #565656;
-    font-size: 1.1rem;
+    color: black;
+    font-size: 1.2rem;
+    text-align: left;
 }
 
 /* Task Due Date*/
 #task-date {
-    color: rgb(157, 159, 160);
+    color: gray;
     font-size: 0.8rem;
+    text-align: left;
 }
 
 /* Checkbox */
 #check-box {
-    outline: 2px solid #525252;
+    outline: 2px dashed #525252;
     color: blueviolet;
     margin-top: 10px;
 }
@@ -238,7 +239,7 @@ select {
 }
 
 #task-checkbox{
-    width: 10%;
+    width: 0%;
 }
 
 .task-container{

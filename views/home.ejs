@@ -13,41 +13,33 @@
 
     <body>
         <div id="main">
-
             <br>
-    
-            <!--App Heading -->
             <h1 id="heading">TODO App</h1>
-    
-            <!-- Form to input task from user -->
             <form action="/create-task" method="POST">
                 
-                <!-- 'Description' container of the form -->
+                <!--'Description'-->
                 <div id="description-container">
                     <p>DESCRIPTION</p><br>
                     <input id="form-description" type="text" name="description" placeholder="What do you need to do?" required>
                 </div>
                 
-                <!-- 'Category' and 'Due Date' container of the form -->
+                <!--'Category' and 'Due Date'-->
                 <div class="category-date-container">
-    
-                    <!-- 'Category' container -->
+                    <!--'Category'-->
                     <div id="category-container">
                         <p id="category-heading">CATEGORY</p><br>
-    
-                        <!-- Category Drop-down Menu -->
+                        <!--Category Drop-down-->
                         <select name="category">
                             <option value="">Choose a category</option>
                             <option value="personal">Personal</option>
                             <option value="work">Work</option>
-                            <option value="school">School</option>
                             <option value="cleaning">Cleaning</option>
                             <option value="other">Other</option>
                         </select>
     
                     </div>
     
-                    <!-- 'Due Date' container -->
+                    <!--'Due Date'-->
                     <div id="due-date-container">
                         <p>DUE DATE</p><br>
                         <input id="date-input-box" type="date" name="dueDate" placeholder="">
@@ -56,10 +48,10 @@
                 </div>
     
     
-                <!-- 'Add' & 'Delete' Button Container of the form -->
+                <!--'Add' & 'Delete' Button Container-->
                 <div class="buttons-container">
     
-                    <!-- Add Task Button -->
+                    <!--Add Button-->
                     <div> 
                         <button type="submit" class="add-button">
                             <i class="fa fa-plus" aria-hidden="true"></i> 
@@ -69,7 +61,7 @@
     
                     &nbsp;
     
-                    <!-- Delete Tasks Button -->
+                    <!--Delete Button-->
                     <div>
                         <button type="submit" class="delete-button" form="delete1">
                             <i class="fa fa-trash" aria-hidden="true"></i>
@@ -81,22 +73,17 @@
     
             </form>
             
-    
-            <!-- Div containing all the tasks present in the database -->
             <div class="show">
-                <!-- Form to 'delete' task(s) from the database -->
                 <form id="delete1" action="/delete-multiple-tasks" method="POST" >
                  
                     <!-- Fetching data from the database -->
-                    <%  for(let i = todo_list.length - 1; i >= 0; i--) { %>
+                    <%  for(let i = todo_list.length-1; i>=0; i--) { %>
     
                         <div id="task">
                             <div id="task-checkbox">
-                            <!-- CHECK BOX, DESCRIPTION AND CATEGORY INFORMATION OF THE TASK SHOW HERE  -->
+                            <!-- CHECK BOX, DESCRIPTION AND CATEGORY INFORMATION-->
                             <input type="checkbox" id="check-box" name=task value="<%= todo_list[i]._id %>">
                             </div>
-                            <!-- Each task of the todo list -->
-    
                             <div class="task-container">
                                 <span id="task-description" class="task-des">
                                     <%= todo_list[i].description %>
@@ -115,9 +102,8 @@
                                 </div>
                             <% }%>
                             </div>
-    
-    
-                            <!-- Cross Icon to remove task from the list (database) -->
+
+                            <!-- Cross Icon to remove task from the list-->
                             <div id="remove-task-icon">
                                 <a href="/delete-task/?id=<%= todo_list[i]._id %>">
                                     <i class="fa fa-times" ></i>

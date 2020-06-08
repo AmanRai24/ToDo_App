@@ -1,4 +1,3 @@
-//requiring mongoose
 const mongoose = require('mongoose');
 //making taskSchema with three fields
 const taskSchema = new mongoose.Schema({
@@ -17,5 +16,5 @@ const taskSchema = new mongoose.Schema({
 });
 
 const Tasks = mongoose.model('Tasks', taskSchema);
-//exporting the tasks
+//exporting 
 module.exports = Tasks;

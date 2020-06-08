@@ -21,8 +21,8 @@
         <form action="/create-task" method="POST">
             <!-- 'Description' container-->
             <div id="description-container">
-                <p>DESCRIPTION</p><br>
-                <input id="form-description" type="text" name="description" placeholder="What do you need to do?" required>
+                <p>DESCRIPTION :-</p><br>
+                <input id="form-description" type="text" name="description" placeholder="What to do today?" required>
             </div>
             <!-- 'Category' and 'Due Date' container-->
             <div class="category-date-container">
@@ -31,17 +31,16 @@
                     <p id="category-heading">CATEGORY</p><br>
                     <!-- Category Drop-down -->
                     <select name="category">
-                        <option value="">Choose a category</option>
+                        <option value="">Choose the Category</option>
                         <option value="personal">Personal</option>
                         <option value="work">Work</option>
-                        <option value="school">School</option>
                         <option value="cleaning">Cleaning</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
                 <!-- 'Due Date' container -->
                 <div id="due-date-container">
-                    <p>DUE DATE</p><br>
+                    <p>DEADLINE</p><br>
                     <input id="date-input-box" type="date" name="dueDate" placeholder="">
                 </div>
             </div>

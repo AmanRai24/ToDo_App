@@ -9,6 +9,15 @@ p{
     color: royalblue;
 }
 
+#git{
+    font-size:24px;
+    position: absolute;
+    right: 100px;
+    /* margin-left: 1200px;
+    margin-top: 5px; */
+
+}
+
 #main {
     width: 50%;
     height: auto;
@@ -78,7 +87,6 @@ select {
     color: black;
     background-color: transparent;
     font-size: 1rem;
-    opacity: 0.6;
     font-family: Cambria, serif;
 }
 
@@ -97,7 +105,6 @@ select {
     border: 0;
     background-color: transparent;
     font-size: 1rem;
-    opacity: 0.6;
     font-family: Cambria, serif;
 }
 
@@ -197,20 +204,20 @@ select {
 
 /* Task Description */
 #task-description {
-    color: #565656;
+    color:black;
     font-size: 1.1rem;
 }
 
 /* Task Due Date */
 #task-date {
-    color: rgb(157, 159, 160);
+    color: gray;
     font-size: 0.8rem;
 }
 
 /* Checkbox */
 #check-box {
     outline: 2px solid #525252;
-    color: blueviolet;
+    /* color: red; */
     margin-top: 10px;
 }
 
@@ -230,6 +237,8 @@ select {
 .linethrough
 {
     text-decoration:line-through;
+    text-decoration-color: red;
+    text-decoration-style: solid;
 }
 
 #task-checkbox{
@@ -243,4 +252,39 @@ select {
 
 .task-category-div{
     width: 20%;
+}
+
+/*----display total task-----------*/
+.footer .totalTask{
+    display: flex;
+    flex-direction: row;
+}
+.footer .totalTask p{
+    position: relative;
+    top: 5px;
+    left: 20px;
+    margin: 0;
+    font-weight: bold;
+}
+.footer .totalTask p span{
+    color: red;
+    font-size: 1.5rem;
+}
+
+
+/* ----Notification container---- */
+#notify {
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+}
+.notify-error {
+    background: red;
+}
+.notify-success {
+    background: lawngreen;
 }

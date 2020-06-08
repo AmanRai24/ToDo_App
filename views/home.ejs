@@ -12,8 +12,9 @@
 </head>
 
 <body>
-
+    <button id="git"><a href="https://github.com/AmanRai24/Todo_App"><i class="fab fa-github"></i></a></button>
     <div id="main">
+        
         <br>
         <!--Heading -->
         <h1 id="heading">TODO App</h1>
@@ -48,7 +49,7 @@
             <div class="buttons-container">
                 <!-- Add Button -->
                 <div> 
-                    <button type="submit" class="add-button">
+                    <button type="submit" onclick="notification('success')" class="add-button">
                         <i class="fa fa-plus" aria-hidden="true"></i> 
                         &nbsp; ADD TASK
                     </button>
@@ -56,13 +57,14 @@
                 &nbsp;
                 <!-- Delete Button -->
                 <div>
-                    <button type="submit" class="delete-button" form="delete1">
+                    <button type="submit" onclick="notification('deleteAll')" class="delete-button" form="delete1">
                         <i class="fa fa-trash" aria-hidden="true"></i>
                         &nbsp; DELETE TASKS
                     </button>
                 </div>
 
             </div>
+            
         </form>
 
 
@@ -97,7 +99,7 @@
                         <% }%>
                         </div>
                         <!-- Cross Icon to remove task from the list-->
-                        <div id="remove-task-icon">
+                        <div id="remove-task-icon" onclick="notification('error')">
                             <a href="/delete-task/?id=<%= todo_list[i]._id %>">
                                 <i class="fa fa-times" ></i>
                             </a>
@@ -110,8 +112,14 @@
             </form>
 
         </div>
+        <div class="footer">
+            <div class="totalTask">
+                <p>Total: <span><%= todo_list.length %></span>  </p>
+            </div>
 
     </div>
+
+    <div id="notify"></div>
     <script src="/js/home.js"></script>
 </body>
 </html>
